@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Http\Requests\EventValidatorFormRequest;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            CustomerSeeder::class,
+            EventSeeder::class,
+            OderDetailSeeder::class,
+            OderSeeder::class,
+            ProductSeeder::class,
+            ]);
     }
 }
